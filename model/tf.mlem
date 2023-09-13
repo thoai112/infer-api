@@ -1,0 +1,32 @@
+artifacts:
+  data:
+    hash: d086265cf23db90fb4da2a172c845624
+    size: 669984
+    uri: tf
+call_orders:
+  __call__:
+  - - model
+    - __call__
+object_type: model
+processors:
+  model:
+    io:
+      save_format: h5
+      type: tf_keras
+    methods:
+      __call__:
+        args: []
+        name: __call__
+        returns:
+          type: unspecified
+        varargs: args
+        varargs_type:
+          ptype: NoneType
+          type: primitive
+        varkw: kwargs
+    type: tf_keras
+requirements:
+- module: keras
+  version: 2.12.0
+- module: tensorflow
+  version: 2.12.0

@@ -1,0 +1,28 @@
+artifacts:
+  data:
+    hash: 40aa56a90a00c03a87056c593d711c87
+    size: 331
+    uri: tf
+call_orders:
+  transform:
+  - - model
+    - transform
+object_type: model
+processors:
+  model:
+    methods:
+      transform:
+        args:
+        - name: X
+          type_:
+            type: unspecified
+        name: transform
+        returns:
+          type: unspecified
+        varargs: args
+        varkw: kwargs
+    type: sklearn_transformer
+requirements:
+- module: sklearn
+  package_name: scikit-learn
+  version: 1.2.2
