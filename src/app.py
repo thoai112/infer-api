@@ -14,17 +14,17 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 router = fastapi.APIRouter()
 
-s3_client = boto3.client('s3')
-model_bucket_name = os.environ.get('MODEL_S3_BUCKET_NAME')
+# s3_client = boto3.client('s3')
+# model_bucket_name = os.environ.get('MODEL_S3_BUCKET_NAME')
 
-# download models
-s3_client.download_file(model_bucket_name, 'models/tf', 'model/tf')
-s3_client.download_file(model_bucket_name, 'models/tf.mlem', 'model/tf.mlem')
+# # download models
+# s3_client.download_file(model_bucket_name, 'models/tf', 'model/tf')
+# s3_client.download_file(model_bucket_name, 'models/tf.mlem', 'model/tf.mlem')
 
-s3_client.download_file(model_bucket_name, 'encoder/tf', 'encoder/tf')
-s3_client.download_file(model_bucket_name, 'encoder/tf.mlem', 'encoder/tf.mlem')
+# s3_client.download_file(model_bucket_name, 'encoder/tf', 'encoder/tf')
+# s3_client.download_file(model_bucket_name, 'encoder/tf.mlem', 'encoder/tf.mlem')
 
-s3_client.download_file(model_bucket_name, 'tokenizer.pickle', 'tokenizer/tokenizer.pickle')
+# s3_client.download_file(model_bucket_name, 'tokenizer.pickle', 'tokenizer/tokenizer.pickle')
 
 max_sequence_len=122
 model = load("model/tf")
